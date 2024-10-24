@@ -1,5 +1,24 @@
-# Vue 3 + TypeScript + Vite
+# Workshop: Crafting Vertical Videos layout with Tailwind CSS.
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+LINE THAILAND DEVELOPER CONFERENCE 2024</br>
+2 November 2024, 9.00 - 17.00 at KBank Siam Pic-Ganesha
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+![LINE THAILAND DEVELOPER CONFERENCE 2024](https://raw.githubusercontent.com/jimmy18dev/LINE-DEVCONF-2024-tailwind-workshop/main/screenshots/fbcover.jpg)
+
+## Get started
+To install, you must have **Git** installed already.
+
+```
+$ git clone https://github.com/jimmy18dev/LINE-DEVCONF-2024-tailwind-workshop.git
+$ cd LINE-DEVCONF-2024-tailwind-workshop
+$ npm i && npm run dev
+
+[Open] http://localhost:3030/
+```
+
+[TailwindCSS Docs](https://tailwindcss.com) to learn more.
+
+## Recommended IDE Setup
+[Visual Studio Code](https://code.visualstudio.com/) and install [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension to Intelligent suggestions for class names, highlights errors and see the complete CSS.
+
+![Tailwind CSS IntelliSense](https://raw.githubusercontent.com/jimmy18dev/LINE-DEVCONF-2024-tailwind-workshop/main/screenshots/tailwind-Intellisense.png)
