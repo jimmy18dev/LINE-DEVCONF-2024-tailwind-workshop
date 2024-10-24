@@ -1,0 +1,36 @@
+export const mockPosts = [{
+  displayName: 'Colin Pullman',
+  caption: 'Use an LINE design system component in the top navigation. You can provide the top navigation of LINE Design System in tab form. If the top navigation is used as a tab, the number of tabs may not exceed two.',
+  totalSmiles: 20,
+  totalComments: 329,
+  totalBookmarks: 20,
+  totalHearts: 309,
+}, {
+  displayName: 'Dominic Mathis',
+  caption: 'LINE Design System is an integrated set of guidelines for components, interaction methods, and other aspects that contribute to LINE\'s design and user experience.',
+  totalSmiles: 78,
+  totalComments: 231,
+  totalBookmarks: 88,
+  totalHearts: 39,
+}, {
+  displayName: 'Harry Jackson',
+  caption: 'Through the UX guidelines, we were able to clearly understand the criteria for applying components.',
+  totalSmiles: 129,
+  totalComments: 53,
+  totalBookmarks: 409,
+  totalHearts: 10,
+}, {
+  displayName: 'Justin Gibson',
+  caption: 'Common values and principles fundamental to LINE Design are provided in these guidelines as a center of truth and as assistance to align LINE services with a unified design language.',
+  totalSmiles: 670,
+  totalComments: 66,
+  totalBookmarks: 3,
+  totalHearts: 234,
+}, {
+  displayName: 'Sebastian Clarkson',
+  caption: 'The foundation is the smallest unit of a design element that contains the minimal design rules. By using the foundation elements in you designs, you can enhance the overall consistency of the LINE Global Family Service. Also, they can work as the common means of communication between developers and designers.',
+  totalSmiles: 509,
+  totalComments: 529,
+  totalBookmarks: 10,
+  totalHearts: 4,
+}]
