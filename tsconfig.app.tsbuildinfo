@@ -1,1 +1,1 @@
-{"root":["./src/main.ts","./src/vite-env.d.ts","./src/app.vue","./src/components/videocard.vue"],"errors":true,"version":"5.6.3"}
+{"root":["./src/main.ts","./src/vite-env.d.ts","./src/datasets/posts.ts","./src/app.vue","./src/components/actionbutton.vue","./src/components/actionbuttons.vue","./src/components/headerbar.vue","./src/components/userimage.vue","./src/components/userprofile.vue","./src/components/videocard.vue"],"version":"5.6.3"}

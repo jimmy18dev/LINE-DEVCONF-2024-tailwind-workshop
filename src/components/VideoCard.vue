@@ -1,27 +1,30 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { mockPosts } from '../datasets/posts'
-import UserImage from './UserImage.vue'
+import UserProfile from './UserProfile.vue'
 import ActionButtons from './ActionButtons.vue'
 
 defineProps({
-  postId: Number,
+  postId: {
+    type: Number,
+    default: 0
+  },
 })
 
 const videoRef = ref(null)
 const isSeeMore = ref(false)
 
 onMounted(() => {
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        // videoRef.value.play()
-      } else {
-        // videoRef.value.pause()
-      }
-    },
-    { threshold: 0.5 }
-  )
+  // const observer = new IntersectionObserver(
+  //   ([entry]) => {
+  //     if (entry.isIntersecting) {
+  //       videoRef.value.play()
+  //     } else {
+  //       videoRef.value.pause()
+  //     }
+  //   },
+  //   { threshold: 0.5 }
+  // )
   // observer.observe(videoRef.value)
 })
 
@@ -33,13 +36,12 @@ function onSeeMore () {
 <template>
   <div class="">
     <div class="">
-      <div class="flex items-center">
-        <UserImage
-          :imageId="postId"
-        />
-        <div class="text-white font-bold">{{ mockPosts[postId - 1].displayName }}</div>
-      </div>
+      <UserProfile
+        :imageId="postId"
+        :displayName="mockPosts[postId - 1].displayName"
+      />
       <div
+        class="text-white bg-green-950"
         @click="onSeeMore"
       >{{ mockPosts[postId - 1].caption }}</div>
     </div>
