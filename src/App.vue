@@ -1,18 +1,12 @@
 <script setup lang="ts">
 import VideoCard from './components/VideoCard.vue'
+import HeaderBar from './components/HeaderBar.vue'
 </script>
 
 <template>
-  <div
-    class=""
-  >
-    <div
-      class=""
-    >
-      <h1 class="text-xl font-bold">LINE DEVCONF 2024</h1>
-      <div class="text-sm">Workshop: Tailwind CSS</div>
-    </div>
-    <template v-for="index in 1" :key="index">
+  <div class="flex flex-col bg-neutral-100 w-1/2 mx-auto">
+    <HeaderBar />
+    <template v-for="index in 5" :key="index">
       <VideoCard :postId="1" />
       <VideoCard :postId="2" />
       <VideoCard :postId="3" />

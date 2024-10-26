@@ -11,3 +11,9 @@ defineProps({
   <img v-else-if="imageId === 4" src="../assets/avatars/user4.jpg" class="avatar-img">
   <img v-else-if="imageId === 5" src="../assets/avatars/user5.jpg" class="avatar-img">
 </template>
+
+<style lang="postcss" scoped>
+.avatar-img {
+  @apply w-10 h-10 rounded-full object-cover aspect-square;
+}
+</style>
