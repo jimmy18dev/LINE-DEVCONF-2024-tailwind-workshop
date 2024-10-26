@@ -5,7 +5,10 @@ import UserProfile from './UserProfile.vue'
 import ActionButtons from './ActionButtons.vue'
 
 defineProps({
-  postId: Number,
+  postId: {
+    type: Number,
+    default: 0
+  },
 })
 
 const videoRef = ref(null)
