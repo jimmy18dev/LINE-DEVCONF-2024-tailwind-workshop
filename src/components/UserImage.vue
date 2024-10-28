@@ -12,7 +12,10 @@ function srcImage (id: Number) {
 </script>
 
 <template>
-   <img :src="srcImage(imageId)" class="avatar-img">
+   <img
+    class="avatar"
+    :src="srcImage(imageId)"
+  >
 </template>
 
 <style lang="postcss" scoped>

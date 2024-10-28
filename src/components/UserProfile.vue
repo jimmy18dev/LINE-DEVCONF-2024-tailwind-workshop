@@ -12,6 +12,6 @@ defineProps({
     <UserImage
       :imageId="imageId"
     />
-    <div class="text-white font-bold">{{ displayName }}</div>
+    <div class="text-white font-bold ml-3">{{ displayName }}</div>
   </div>
 </template>

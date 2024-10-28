@@ -36,7 +36,7 @@ function srcVideo (postId: number | undefined) {
 </script>
 
 <template>
-  <div class="bg-gray-400">
+  <div class="bg-gray-600">
     <div class="">
       <!-- <UserProfile
         :imageId="postId"
@@ -55,7 +55,7 @@ function srcVideo (postId: number | undefined) {
       :totalBookmarks="mockPosts[postId - 1].totalBookmarks"
       :totalHearts="mockPosts[postId - 1].totalHearts"
     /> -->
-    
+  
     <video
       ref="videoRef"
       class="video-player"
