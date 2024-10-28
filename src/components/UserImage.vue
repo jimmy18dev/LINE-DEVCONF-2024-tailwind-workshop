@@ -1,15 +1,18 @@
 <script setup lang="ts">
 defineProps({
-  imageId: Number,
+  imageId: {
+    type: Number,
+    required: true,
+  },
 })
+
+function srcImage (id: Number) {
+  return new URL(`../assets/avatars/user${id}.jpg`, import.meta.url).href
+}
 </script>
 
 <template>
-  <img v-if="imageId === 1" src="../assets/avatars/user1.jpg" class="avatar">
-  <img v-else-if="imageId === 2" src="../assets/avatars/user2.jpg" class="avatar">
-  <img v-else-if="imageId === 3" src="../assets/avatars/user3.jpg" class="avatar">
-  <img v-else-if="imageId === 4" src="../assets/avatars/user4.jpg" class="avatar">
-  <img v-else-if="imageId === 5" src="../assets/avatars/user5.jpg" class="avatar">
+   <img :src="srcImage(imageId)" class="avatar-img">
 </template>
 
 <style lang="postcss" scoped>

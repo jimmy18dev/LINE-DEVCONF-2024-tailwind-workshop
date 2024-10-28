@@ -7,25 +7,33 @@ import ActionButtons from './ActionButtons.vue'
 defineProps({
   postId: {
     type: Number,
-    default: 0
+    required: true,
   },
 })
 
-const videoRef = ref(null)
+const videoRef = ref<HTMLVideoElement | null>(null)
 
-// onMounted(() => {
-//   const observer = new IntersectionObserver(
-//     ([entry]) => {
-//       if (entry.isIntersecting) {
-//         videoRef.value.play()
-//       } else {
-//         videoRef.value.pause()
-//       }
-//     },
-//     { threshold: 0.5 }
-//   )
-//   observer.observe(videoRef.value)
-// })
+onMounted(() => {
+  // const observer = new IntersectionObserver(
+  //   ([entry]) => {
+  //     if (entry.isIntersecting) {
+  //       videoRef.value?.play()
+  //     } else {
+  //       videoRef.value?.pause()
+  //     }
+  //   },
+  //   { threshold: 0.5 }
+  // )
+
+  // if (videoRef.value) {
+  //   observer.observe(videoRef.value)
+  // }
+})
+
+function srcVideo (postId: number | undefined) {
+  if (postId === undefined) return ''
+  return new URL(`../assets/videos/video${postId}.mp4`, import.meta.url).href
+}
 </script>
 
 <template>
@@ -50,34 +58,9 @@ const videoRef = ref(null)
     /> -->
     
     <video
-      v-if="postId === 1"
       ref="videoRef"
       class="video-player"
-      src="../assets/videos/video1.mp4"
-    ></video>
-    <video
-      v-else-if="postId === 2"
-      ref="videoRef"
-      class="video-player"
-      src="../assets/videos/video2.mp4"
-    ></video>
-    <video
-      v-else-if="postId === 3"
-      ref="videoRef"
-      class="video-player"
-      src="../assets/videos/video3.mp4"
-    ></video>
-    <video
-      v-else-if="postId === 4"
-      ref="videoRef"
-      class="video-player"
-      src="../assets/videos/video4.mp4"
-    ></video>
-    <video
-      v-else-if="postId === 5"
-      ref="videoRef"
-      class="video-player"
-      src="../assets/videos/video5.mp4"
+      :src="srcVideo(postId)"
     ></video>
   </div>
 </template>
