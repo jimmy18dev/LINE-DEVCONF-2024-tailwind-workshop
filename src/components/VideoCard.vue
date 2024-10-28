@@ -12,23 +12,22 @@ defineProps({
 })
 
 const videoRef = ref<HTMLVideoElement | null>(null)
+// onMounted(() => {
+//   const observer = new IntersectionObserver(
+//     ([entry]) => {
+//       if (entry.isIntersecting) {
+//         videoRef.value?.play()
+//       } else {
+//         videoRef.value?.pause()
+//       }
+//     },
+//     { threshold: 0.5 }
+//   )
 
-onMounted(() => {
-  // const observer = new IntersectionObserver(
-  //   ([entry]) => {
-  //     if (entry.isIntersecting) {
-  //       videoRef.value?.play()
-  //     } else {
-  //       videoRef.value?.pause()
-  //     }
-  //   },
-  //   { threshold: 0.5 }
-  // )
-
-  // if (videoRef.value) {
-  //   observer.observe(videoRef.value)
-  // }
-})
+//   if (videoRef.value) {
+//     observer.observe(videoRef.value)
+//   }
+// })
 
 function srcVideo (postId: number | undefined) {
   if (postId === undefined) return ''
