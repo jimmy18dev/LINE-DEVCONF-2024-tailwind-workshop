@@ -64,9 +64,6 @@ function onSeeMore () {
     
     <video
       ref="videoRef"
-      muted
-      loop
-      playsinline
       class="video-player"
       :src="srcVideo(postId)"
     ></video>
