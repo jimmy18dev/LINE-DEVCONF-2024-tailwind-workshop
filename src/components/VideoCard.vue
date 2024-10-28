@@ -12,47 +12,42 @@ defineProps({
 })
 
 const videoRef = ref(null)
-const isSeeMore = ref(false)
 
-onMounted(() => {
-  // const observer = new IntersectionObserver(
-  //   ([entry]) => {
-  //     if (entry.isIntersecting) {
-  //       videoRef.value.play()
-  //     } else {
-  //       videoRef.value.pause()
-  //     }
-  //   },
-  //   { threshold: 0.5 }
-  // )
-  // observer.observe(videoRef.value)
-})
-
-function onSeeMore () {
-  isSeeMore.value = !isSeeMore.value
-}
+// onMounted(() => {
+//   const observer = new IntersectionObserver(
+//     ([entry]) => {
+//       if (entry.isIntersecting) {
+//         videoRef.value.play()
+//       } else {
+//         videoRef.value.pause()
+//       }
+//     },
+//     { threshold: 0.5 }
+//   )
+//   observer.observe(videoRef.value)
+// })
 </script>
 
 <template>
-  <div class="">
+  <div class="bg-gray-400">
     <div class="">
-      <UserProfile
+      <!-- <UserProfile
         :imageId="postId"
         :displayName="mockPosts[postId - 1].displayName"
-      />
-      <div
-        class="text-white bg-green-950"
-        @click="onSeeMore"
-      >{{ mockPosts[postId - 1].caption }}</div>
+      /> -->
+
+      <!-- <div
+        class="text-white bg-green-600"
+      >{{ mockPosts[postId - 1].caption }}</div> -->
     </div>
 
-    <ActionButtons
-      class=""
+    <!-- <ActionButtons
+      class="bg-rose-600"
       :totalSmiles="mockPosts[postId - 1].totalSmiles"
       :totalComments="mockPosts[postId - 1].totalComments"
       :totalBookmarks="mockPosts[postId - 1].totalBookmarks"
       :totalHearts="mockPosts[postId - 1].totalHearts"
-    />
+    /> -->
     
     <video
       v-if="postId === 1"
@@ -86,3 +81,9 @@ function onSeeMore () {
     ></video>
   </div>
 </template>
+
+<style lang="postcss" scoped>
+.video-player {
+  @apply bg-transparent;
+}
+</style>

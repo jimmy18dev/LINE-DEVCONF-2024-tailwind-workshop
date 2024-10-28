@@ -6,7 +6,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col w-12 h-12 text-white items-center justify-center bg-blue-950">
+  <div class="flex flex-col w-12 h-12 text-white items-center justify-center">
     <font-awesome-icon
       v-if="icon === 'face-smile'"
       class="text-2xl"

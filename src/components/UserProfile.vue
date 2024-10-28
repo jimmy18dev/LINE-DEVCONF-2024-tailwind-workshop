@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex items-center bg-neutral-800">
+  <div class="flex items-center bg-blue-600">
     <UserImage
       :imageId="imageId"
     />
