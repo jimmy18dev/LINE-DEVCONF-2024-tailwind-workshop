@@ -12,22 +12,22 @@ defineProps({
 })
 
 const videoRef = ref<HTMLVideoElement | null>(null)
-// onMounted(() => {
-//   const observer = new IntersectionObserver(
-//     ([entry]) => {
-//       if (entry.isIntersecting) {
-//         videoRef.value?.play()
-//       } else {
-//         videoRef.value?.pause()
-//       }
-//     },
-//     { threshold: 0.5 }
-//   )
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        videoRef.value?.play()
+      } else {
+        videoRef.value?.pause()
+      }
+    },
+    { threshold: 0.5 }
+  )
 
-//   if (videoRef.value) {
-//     observer.observe(videoRef.value)
-//   }
-// })
+  if (videoRef.value) {
+    observer.observe(videoRef.value)
+  }
+})
 
 function srcVideo (postId: number | undefined) {
   if (postId === undefined) return ''
@@ -39,33 +39,31 @@ function srcVideo (postId: number | undefined) {
   <div class="bg-gray-600">
     <div class="">
       <!-- <UserProfile
+        class="bg-blue-600"
         :imageId="postId"
-        :displayName="mockPosts[postId - 1].displayName"
+        :displayName="mockPosts[postId-1].displayName"
       /> -->
 
       <!-- <div
-        class="text-white bg-green-600"
-      >{{ mockPosts[postId - 1].caption }}</div> -->
+        class="bg-green-600 text-white"
+      >{{ mockPosts[postId-1].caption }}</div> -->
     </div>
 
     <!-- <ActionButtons
       class="bg-rose-600"
-      :totalSmiles="mockPosts[postId - 1].totalSmiles"
-      :totalComments="mockPosts[postId - 1].totalComments"
-      :totalBookmarks="mockPosts[postId - 1].totalBookmarks"
-      :totalHearts="mockPosts[postId - 1].totalHearts"
+      :totalSmiles="mockPosts[postId-1].totalSmiles"
+      :totalComments="mockPosts[postId-1].totalComments"
+      :totalBookmarks="mockPosts[postId-1].totalBookmarks"
+      :totalHearts="mockPosts[postId-1].totalHearts"
     /> -->
   
     <video
       ref="videoRef"
-      class="video-player"
+      class="bg-transparent"
+      muted
+      loop
+      playsinline
       :src="srcVideo(postId)"
     ></video>
   </div>
 </template>
-
-<style lang="postcss" scoped>
-.video-player {
-  @apply bg-transparent;
-}
-</style>
