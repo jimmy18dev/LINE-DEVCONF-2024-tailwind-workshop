@@ -4,7 +4,10 @@ import HeaderBar from './components/HeaderBar.vue'
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div
+    id="container"
+    class="flex flex-col"
+  >
     <!-- <HeaderBar /> -->
     <template v-for="index in 1" :key="index">
       <!-- <VideoCard :postId="1" /> -->
