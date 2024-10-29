@@ -38,11 +38,11 @@ function srcVideo (postId: number | undefined) {
 <template>
   <div class="bg-gray-600">
     <div class="">
-      <UserProfile
+      <!-- <UserProfile
         class="bg-blue-600"
         :imageId="postId"
         :displayName="mockPosts[postId-1].displayName"
-      />
+      /> -->
 
       <!-- <div
         class="bg-green-600 text-white"
