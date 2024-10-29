@@ -59,17 +59,11 @@ function srcVideo (postId: number | undefined) {
   
     <video
       ref="videoRef"
+      class="bg-transparent"
       muted
       loop
       playsinline
-      class="video-player"
       :src="srcVideo(postId)"
     ></video>
   </div>
 </template>
-
-<style lang="postcss" scoped>
-.video-player {
-  @apply bg-transparent;
-}
-</style>
