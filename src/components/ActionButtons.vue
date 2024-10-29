@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex bg-red-950">
+  <div class="flex gap-3">
     <ActionButton
       icon="heart"
       :total="totalHearts"

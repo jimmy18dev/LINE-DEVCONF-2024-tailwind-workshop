@@ -12,11 +12,14 @@ function srcImage (id: Number) {
 </script>
 
 <template>
-   <img :src="srcImage(imageId)" class="avatar-img">
+   <img
+    class="avatar"
+    :src="srcImage(imageId)"
+  >
 </template>
 
 <style lang="postcss" scoped>
-.avatar-img {
+.avatar {
   @apply w-10 h-10 rounded-full object-cover aspect-square;
 }
 </style>
