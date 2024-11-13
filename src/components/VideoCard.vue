@@ -49,13 +49,13 @@ function srcVideo (postId: number | undefined) {
       >{{ mockPosts[postId-1].caption }}</div>
     </div>
 
-    <!-- <ActionButtons
-      class="bg-rose-600"
+    <ActionButtons
+      class="bg-rose-600 absolute inset-y-0 right-0 justify-end"
       :totalSmiles="mockPosts[postId-1].totalSmiles"
       :totalComments="mockPosts[postId-1].totalComments"
       :totalBookmarks="mockPosts[postId-1].totalBookmarks"
       :totalHearts="mockPosts[postId-1].totalHearts"
-    /> -->
+    />
   
     <video
       ref="videoRef"
