@@ -59,7 +59,7 @@ function srcVideo (postId: number | undefined) {
   
     <video
       ref="videoRef"
-      class="bg-transparent"
+      class="bg-transparent w-full h-svh object-cover"
       muted
       loop
       playsinline

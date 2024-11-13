@@ -6,12 +6,12 @@ import HeaderBar from './components/HeaderBar.vue'
 <template>
   <div
     id="container"
-    class="flex flex-col"
+    class="flex flex-col fixed inset-0 overflow-y-auto"
   >
     <!-- <HeaderBar /> -->
     <template v-for="index in 1" :key="index">
-      <!-- <VideoCard :postId="1" /> -->
-      <!-- <VideoCard :postId="2" /> -->
+      <VideoCard :postId="1" />
+      <VideoCard :postId="2" />
       <!-- <VideoCard :postId="3" /> -->
       <!-- <VideoCard :postId="4" /> -->
       <!-- <VideoCard :postId="5" /> -->
