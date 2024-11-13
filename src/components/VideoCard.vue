@@ -36,7 +36,7 @@ function srcVideo (postId: number | undefined) {
 </script>
 
 <template>
-  <div class="bg-gray-600 relative">
+  <div class="relative snap-start">
     <div class="absolute inset-x-0 bottom-0 p-4 pb-8 pr-16 bg-gradient-to-t from-black/70">
       <UserProfile
         :imageId="postId"

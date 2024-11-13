@@ -6,15 +6,15 @@ import HeaderBar from './components/HeaderBar.vue'
 <template>
   <div
     id="container"
-    class="flex flex-col fixed inset-0 overflow-y-auto"
+    class="flex flex-col fixed inset-0 overflow-y-auto snap-y snap-mandatory"
   >
     <!-- <HeaderBar /> -->
-    <template v-for="index in 1" :key="index">
+    <template v-for="index in 5" :key="index">
       <VideoCard :postId="1" />
       <VideoCard :postId="2" />
-      <!-- <VideoCard :postId="3" /> -->
-      <!-- <VideoCard :postId="4" /> -->
-      <!-- <VideoCard :postId="5" /> -->
+      <VideoCard :postId="3" />
+      <VideoCard :postId="4" />
+      <VideoCard :postId="5" />
     </template>
   </div>
 </template>
