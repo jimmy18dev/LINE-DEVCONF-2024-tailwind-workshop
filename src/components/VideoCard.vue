@@ -36,17 +36,17 @@ function srcVideo (postId: number | undefined) {
 </script>
 
 <template>
-  <div class="bg-gray-600">
-    <div class="">
-      <!-- <UserProfile
+  <div class="bg-gray-600 relative">
+    <div class="absolute inset-x-0 bottom-0">
+      <UserProfile
         class="bg-blue-600"
         :imageId="postId"
         :displayName="mockPosts[postId-1].displayName"
-      /> -->
+      />
 
-      <!-- <div
+      <div
         class="bg-green-600 text-white"
-      >{{ mockPosts[postId-1].caption }}</div> -->
+      >{{ mockPosts[postId-1].caption }}</div>
     </div>
 
     <!-- <ActionButtons
