@@ -36,30 +36,29 @@ function srcVideo (postId: number | undefined) {
 </script>
 
 <template>
-  <div class="bg-gray-600">
-    <div class="">
-      <!-- <UserProfile
-        class="bg-blue-600"
+  <div class="relative snap-start sm:w-[540px] sm:mx-auto">
+    <div class="absolute inset-x-0 bottom-0 p-4 pb-8 pr-16 bg-gradient-to-t from-black/70">
+      <UserProfile
         :imageId="postId"
         :displayName="mockPosts[postId-1].displayName"
-      /> -->
+      />
 
-      <!-- <div
-        class="bg-green-600 text-white"
-      >{{ mockPosts[postId-1].caption }}</div> -->
+      <div
+        class="text-white mt-3"
+      >{{ mockPosts[postId-1].caption }}</div>
     </div>
 
-    <!-- <ActionButtons
-      class="bg-rose-600"
+    <ActionButtons
+      class="absolute inset-y-0 right-0 justify-end pb-8"
       :totalSmiles="mockPosts[postId-1].totalSmiles"
       :totalComments="mockPosts[postId-1].totalComments"
       :totalBookmarks="mockPosts[postId-1].totalBookmarks"
       :totalHearts="mockPosts[postId-1].totalHearts"
-    /> -->
+    />
   
     <video
       ref="videoRef"
-      class="bg-transparent"
+      class="bg-transparent w-full h-svh object-cover"
       muted
       loop
       playsinline
