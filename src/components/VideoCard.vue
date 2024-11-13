@@ -37,7 +37,7 @@ function srcVideo (postId: number | undefined) {
 
 <template>
   <div class="bg-gray-600 relative">
-    <div class="absolute inset-x-0 bottom-0">
+    <div class="absolute inset-x-0 bottom-0 p-4 pb-8 pr-16">
       <UserProfile
         class="bg-blue-600"
         :imageId="postId"
@@ -45,12 +45,12 @@ function srcVideo (postId: number | undefined) {
       />
 
       <div
-        class="bg-green-600 text-white"
+        class="bg-green-600 text-white mt-3"
       >{{ mockPosts[postId-1].caption }}</div>
     </div>
 
     <ActionButtons
-      class="bg-rose-600 absolute inset-y-0 right-0 justify-end"
+      class="bg-rose-600 absolute inset-y-0 right-0 justify-end pb-8"
       :totalSmiles="mockPosts[postId-1].totalSmiles"
       :totalComments="mockPosts[postId-1].totalComments"
       :totalBookmarks="mockPosts[postId-1].totalBookmarks"
